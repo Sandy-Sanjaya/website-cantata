@@ -1,0 +1,523 @@
+:root{
+    --bg: #6C3428; 
+    --primary: #BA704F; 
+}
+
+*{
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{ 
+    font-family: "Merriweather", sans-serif;
+    background-color: var(--bg);
+    color: #fff; 
+    min-height: 2000px;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    border-bottom: 1px solid #000;
+    background-color: var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar .navbar-nav a{ 
+    color: #fff; 
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem; 
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--bg);
+    transform: scale(1.2);
+}
+
+.navbar .navbar-nav a::after{
+    content: "";
+    display: block;
+    padding-bottom: 0.5rem; 
+    border-bottom: 0.1rem solid var(--bg); 
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a{
+    color:#fff; 
+    margin: 0 0.5rem; 
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--bg);
+}
+
+#hamburger-menu{
+    display: none; 
+}
+
+/* Hero Section */
+.hero{
+    min-height: 100vh;
+    display: flex; 
+    align-items: center;
+    background-image: url("Child Orchestra Music.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hero .content{
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+
+.hero .content h1{
+    font-size: 7rem;
+    color: var(--primary); 
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+    line-height: 1.2;
+}
+
+.hero .content p{
+    color: #CEE6F3;
+    font-size: 2rem; 
+    line-height: 1.4;
+    max-width: 40rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta{ 
+    display: inline-block;
+    padding: 1rem 3rem; 
+    font-size: 1.5rem;
+    color: #fff;
+    background-color: var(--primary);
+    margin-top: 1rem; 
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+.hero .content .cta:hover{
+    color: var(--primary);
+    background-color: var(--bg);
+    transition: 0.2s;
+}
+
+/* About Us */
+.about{
+    padding: 8rem 7% 1.4rem; 
+}
+
+.about .row{
+    display: flex;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span{
+    color: var(--primary)
+}
+
+.about .row .about-img{
+    flex: 1 1 45rem; 
+}
+
+.about .row .about-img img{
+    width: 100%; 
+    border-radius: 0.5rem; 
+    margin-bottom: 2rem;
+}
+
+.about .row .content{
+    flex: 1 1 45rem; 
+    padding: 0 1rem; 
+}
+
+.about .row .content h3{
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--primary);
+}
+
+.about .row .content p{
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6rem;
+    text-align: justify;
+}
+
+/* our course section */
+.our-course{
+    padding: 8rem 7% 1.4rem;
+}
+
+.our-course h2{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.our-course h2 span{
+    color: var(--primary)
+}
+
+.our-course p { 
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    font-weight: 300;
+    line-height: 1.6;
+    color:#CEE6F3
+}
+
+.our-course h3{
+    margin-top: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary)
+}
+
+.our-course .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.our-course .row .our-course-card{
+    text-align: center;
+}
+
+.our-course .row .our-course-card img{
+    border-radius: 10%;
+    width: 80%;
+    max-width: 30%;
+    
+}
+
+.our-course .row .our-course-card .our-course-title{
+    margin: 0.5rem auto 0.5rem;
+
+}
+
+.our-course .row .our-course-card .our-course-description{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+/* achievement section */
+.achievement{
+    padding: 8rem 7% 1.4rem; 
+}
+
+.achievement h2{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.achievement h2 span{
+    color: var(--primary);
+}
+
+.achievement p{
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    color:#CEE6F3
+}
+
+.achievement h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.achievement .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.achievement .row .achievement-card{
+    text-align: center;
+}
+
+.achievement .row .achievement-card img{
+    border-radius: 50%;
+    width: 80%;
+    max-width: 30%;
+}
+
+.achievement .row .achievement-card .achievement-title{
+    margin: 0.5rem auto 0.5rem;
+}
+
+.achievement .row .achievement-card .achievement-description{
+    margin-bottom: 2rem;
+}
+
+/* Team Section */
+.team{
+    padding: 8rem 7% 1.4rem; 
+}
+
+.team h2{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.team h2 span{
+    color: var(--primary);
+}
+
+.team p{
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    color:#CEE6F3;
+}
+
+.team h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.team .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.team .row .team-card{
+    text-align: center;
+}
+
+.team .row .team-card img{
+    border-radius: 50%;
+    width: 80%;
+    max-width: 30%;
+}
+
+.team .row .team-card .team-title{
+    margin: 0.5rem auto 0.5rem;
+}
+
+.team .row .team-card .team-description{
+    margin-bottom: 2.5rem;
+}
+
+/* Our Testimonial */
+.our-testimonial{
+    padding: 8rem 7% 1.4rem;
+}
+
+.our-testimonial h2{
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+}
+
+.our-testimonial h2 span{
+    color: var(--primary);
+}
+
+.our-testimonial p{
+    text-align: center;
+    max-width: 50rem;
+    margin: auto;
+    line-height: 1.6;
+    font-weight: 300;
+    color:#CEE6F3;
+}
+
+.our-testimonial h3{
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.our-testimonial .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+.our-testimonial .row .our-testimonial-card{
+    text-align: center;
+}
+
+.our-testimonial .row .our-testimonial-card img{
+    border-radius: 50%;
+    width: 80%;
+    max-width: 30%;
+}
+
+.our-testimonial .row .our-testimonial-card .our-testimonial-title{
+    margin: 0.5rem auto 0.5rem;
+}
+
+.our-testimonial .row .our-testimonial-card .our-testimonial-description{
+    margin-bottom: 2.5rem;
+}
+
+
+/* Footer */
+footer{
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0 3rem; 
+    margin-top: 3rem;
+}
+
+footer .socials{
+    padding: 1rem 0;
+}
+
+footer .socials a{
+    color: #fff; 
+    margin: 1rem;
+}
+
+footer .socials a:hover{
+    color: var(--bg);
+}
+
+footer .links a:hover{
+    color: var(--bg);
+}
+
+footer .links{
+    margin-bottom: 1.4rem;
+}
+
+footer .links a{
+    color: #fff; 
+    padding: 0.7rem 1rem;
+}
+
+footer .credit{
+    font-size: 0.8rem;
+}
+
+footer .credit a{
+    color: var(--bg);
+    font-weight: bold;
+}
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1336px){
+    html{
+        font-size: 99%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 62.5%;
+    }
+
+    #hamburger-menu{
+        display: inline-block; 
+    }
+
+    .navbar .navbar-nav{
+        position: absolute; 
+        top: 100%;
+        right: -100%; 
+        background-color: #fff;
+        width: 30rem; 
+        height: 100vh; 
+        transition: 0.3s; 
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0; 
+    }
+
+    .navbar .navbar-nav a{
+        color: var(--bg); 
+        display: block; 
+        margin: 1.5rem; 
+        padding: 0.5rem; 
+        font-size: 2rem;
+    }
+
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(0.2); 
+    }
+
+    .about .row{
+        flex-wrap: wrap;
+    }
+
+    .about .row .about-img img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .about .row .content{
+        padding: 0; 
+    }
+
+    .about .row .content h3{
+        margin-top: 1rem;
+        font-size: 2rem;
+    }
+
+    .about .row .content p{
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Phone */
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+}
